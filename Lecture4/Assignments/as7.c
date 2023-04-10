@@ -111,7 +111,7 @@ int main(){
       }
 
       else if (point == 8){
-        printf("\nH has no nearby charging stations"); // if point is at index of i which is 8, prints that i has no nearby charging stations
+        printf("\nI has no nearby charging stations"); // if point is at index of i which is 8, prints that i has no nearby charging stations
         break;
       }
 
