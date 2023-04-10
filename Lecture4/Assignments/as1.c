@@ -11,5 +11,5 @@ int main(){
     }
     return 0;
 
-    // prints until 2 to the power of 6 ( 1 2 4 8 16 32 64 128)
+    // prints 1, 2, 4, 8, 16, 32, 64, 128
 }
