@@ -110,6 +110,11 @@ int main(){
         break;
       }
 
+      else if (point == 7){
+        printf("\nH has no nearby charging stations"); // if point is at index of h which is 7, prints that h has no nearby charging stations
+        break;
+      }
+
       else if (point == 8){
         printf("\nI has no nearby charging stations"); // if point is at index of i which is 8, prints that i has no nearby charging stations
         break;
