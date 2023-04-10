@@ -1,6 +1,7 @@
 #include <stdio.h>
 #define ROWS 9
 #define COLUMNS 9
+#define length_of_road_networks ((int) (sizeof(road_networks) / sizeof(road_networks[0]))) // bonus 
 
 int main(){
 
@@ -25,11 +26,11 @@ int main(){
     int j = 0;
 
     // initializes the adjancy matrix with brackets on [c] & [d].
-    while (i < ROWS){
+    while (i < length_of_road_networks){
         printf("%c ", 'a'+i);
 
         // checks if the iteration is at row and col 2 and 3. Also prints the adjancy matrix with brackets on [c] & [d].
-        while (j < COLUMNS){
+        while (j < length_of_road_networks){
             i == 2 || j == 2 || i == 3 || j == 3 ? printf("[%d] \t", road_networks[i][j]) 
             : printf("%2d \t", road_networks[i][j]); 
         j++;
@@ -99,7 +100,7 @@ int main(){
         main();
     }
 
-    for (int i = 0; i < ROWS; i++) {
+    for (int i = 0; i < length_of_road_networks; i++) {
 
       if (point == 2){
         printf("\npoint: C is a charging station."); // if point is at the index of c which is 2, prints that the user has arrived on a charging station
@@ -123,7 +124,7 @@ int main(){
       // checks if user input is not at index 2,3 or 8.
       else if (i == point){
 
-        for (int j = i; j <= COLUMNS; j++){
+        for (int j = i; j <= length_of_road_networks; j++){
         
         // checks if there is a one way path between a point and c
           if (road_networks[j][2] == 1){ 
