@@ -30,9 +30,6 @@ void scan_word(int occurrences[26]){
     }
 }
 
-
-
-
 int main(){
 
 int i = 0, occurrences1[26] = {0}, occurrences2[26] = {0}; // counter arrays that initializes at 0
@@ -60,13 +57,8 @@ int i = 0, occurrences1[26] = {0}, occurrences2[26] = {0}; // counter arrays tha
 
     printf("\n");
     i++;
-
     }
     
-
-
     return 0;
-
-
 
 }

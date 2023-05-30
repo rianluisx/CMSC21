@@ -3,7 +3,7 @@
 #include <ctype.h>
 
 //function that checks if two arrays are anagrams
-bool is_anagram(int* occurrences1[26], int* occurrences2[26]){
+bool is_anagram(int* occurrences1, int* occurrences2){
     // for loop that checks each letter in the words
     for (int i = 0; i < 26; i++){
         // compares the values at memory locations pointed by occurrences1 + i & occurrences2 + i
@@ -11,25 +11,22 @@ bool is_anagram(int* occurrences1[26], int* occurrences2[26]){
             return false; // returns false if not an anagram
         }
     }
-    // returns true if it's an anagram
+    // returns true if it's an anagram 
     return true;
 }
 
 // function that scans input from the user and updates the array
-void scan_word(int *occurrences[26]){
+void scan_word(int* occurrences){
     char c; // variable declaration
     // scans the user input
     for (c = getchar(); c != '\n'; c = getchar()){
         // checks if it is a character or not
         if (isalpha(c)){
 
-            *(occurrences[toupper(c) - 'A'])+=1; // uses toupper to not make it case sensitive and subtract 'A' to get index
+            (*(occurrences + (toupper(c) - 'A')))+=1; // uses toupper to not make it case sensitive and subtract 'A' to get index
         }
     }
 }
-
-
-
 
 int main(){
 
@@ -58,13 +55,7 @@ int i = 0, occurrences1[26] = {0}, occurrences2[26] = {0}; // counter arrays tha
 
     printf("\n");
     i++;
-
     }
-    
-
-
     return 0;
-
-
 
 }
