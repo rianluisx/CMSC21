@@ -15,7 +15,7 @@ struct line{
 float solveSlope(struct line line1){
     
     float slope = (line1.point2.y - line1.point1.y) / (line1.point2.x - line1.point1.x); // solves for the slope (y2-y1)/(x2-x1)
-    // if slope turns out to be a negative 0, makes it
+    // if slope turns out to be a negative 0, makes it positive
     if (slope == 0){
         return -slope;
     }
