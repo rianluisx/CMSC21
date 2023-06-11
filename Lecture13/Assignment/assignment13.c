@@ -13,7 +13,13 @@ struct line{
 } l;
 
 float solveSlope(struct line line1){
-    return (line1.point2.y - line1.point1.y) / (line1.point2.x - line1.point1.x); // solves for the slope
+    
+    float slope = (line1.point2.y - line1.point1.y) / (line1.point2.x - line1.point1.x); // solves for the slope (y2-y1)/(x2-x1)
+    // if slope turns out to be a negative 0, makes it
+    if (slope == 0){
+        return -slope;
+    }
+    return slope;
 
 }
 float *solveMidpoint(struct line line1){
@@ -34,9 +40,9 @@ float *solveMidpoint(struct line line1){
 
 float solveDistance(struct line line1){
     float distance, Xordinates, Yordinates;
-    Xordinates = (line1.point1.x - line1.point2.x) * (line1.point1.x - line1.point2.x); //  (x1 - x2)^2
-    Yordinates = (line1.point1.y - line1.point2.y) * (line1.point1.x - line1.point2.x); //  (y1 - y2)^2
-    distance = sqrt(Xordinates + Yordinates); // distance formula
+    Xordinates = (line1.point1.x - line1.point2.x); // (x1 - x2)
+    Yordinates = (line1.point1.y - line1.point2.y); // (y1 - y2)
+    distance = sqrt(pow(Xordinates, 2) + pow(Yordinates, 2)); // distance formula with use of pow function
     return distance; // returns distance
 }
 
