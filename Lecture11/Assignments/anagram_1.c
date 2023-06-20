@@ -28,6 +28,7 @@ void scan_word(int occurrences[26]){
             occurrences[toupper(c) - 'A']++; // uses toupper to not make it case sensitive 
         }
     }
+    
 }
 
 int main(){

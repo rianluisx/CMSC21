@@ -13,6 +13,7 @@ bool is_anagram(int* occurrences1, int* occurrences2){
     }
     // returns true if it's an anagram 
     return true;
+    
 }
 
 // function that scans input from the user and updates the array
