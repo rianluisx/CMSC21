@@ -13,7 +13,6 @@ int main(void)
 {
 	char reminders[MAX_REMIND] [MSG_LEN + 3]; //stores in 2D array with MAX_REMIND memory location and length MSG_Len + 3
 
-
 	char day_str[3], msg_str[MSG_LEN + 1];
 	int day, i, j, num_remind = 0;
 

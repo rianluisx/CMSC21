@@ -13,7 +13,6 @@ int main(int argc, char *argv[])
 					  "Uranus", "Neptune", "Pluto"};
 	int i, j;
 
-
 	for (i = 1; i < argc; i++) {
 
 		//
